@@ -11,16 +11,12 @@ struct CoinItemView: View {
     let id: Int
     var body: some View {
         HStack(spacing: 10) {
-            Text(String(id))
-                .font(.caption)
-                .fontWeight(.bold)
-                .foregroundColor(
-                    Color(
-                        red:53.0/255.0,
-                        green:64.0/255.0,
-                        blue:76.0/255.0
-                    )
-                )
+//            Text(String(id))
+//                .font(.caption2)
+//                .fontWeight(.bold)
+//                .foregroundColor(.black)
+//                .frame(width: 35, alignment: .leading)
+//                .background(.clear)
             
             Image(systemName: "bitcoinsign.circle.fill")
                 .resizable()

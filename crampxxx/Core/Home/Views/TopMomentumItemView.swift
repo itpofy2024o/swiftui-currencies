@@ -37,7 +37,7 @@ struct TopMomentumItemView: View {
         .frame(width: 150, height: 150)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color(.systemGray2),lineWidth: 3.5)
+                .stroke(Color(.systemGray2),lineWidth: 1)
         )
     }
 }

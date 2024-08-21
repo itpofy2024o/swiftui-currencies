@@ -9,9 +9,9 @@ import SwiftUI
 
 struct CoinListView: View {
     var body: some View {
-        VStack {
+        VStack(alignment:.leading) {
             Text("All Coins and Tokens")
-                .font(.headline)
+                .font(.headline).padding(.leading,10)
             
             HStack {
                 Text("Coin/Token")
@@ -19,11 +19,11 @@ struct CoinListView: View {
                 Spacer()
                 Text("Value")
                     .font(.caption)
-            }.padding(.horizontal).padding(.vertical,2)
+            }.padding(.horizontal,10).padding(.vertical,2)
             
             ScrollView(.vertical) {
                 VStack {
-                    ForEach(0 ..< 25) { index in
+                    ForEach(0 ..< 250) { index in
                         CoinItemView(id: index+1)
                     }
                 }

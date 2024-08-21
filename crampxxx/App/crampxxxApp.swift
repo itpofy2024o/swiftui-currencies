@@ -11,7 +11,7 @@ import SwiftUI
 struct crampxxxApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }

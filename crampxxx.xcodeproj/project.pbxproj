@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9EAD8CB42C76155300CA256C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD8CB32C76155300CA256C /* HomeView.swift */; };
+		9EAD8CBA2C761B3B00CA256C /* TopMomentumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD8CB92C761B3B00CA256C /* TopMomentumView.swift */; };
+		9EAD8CBC2C761B5000CA256C /* TopMomentumItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD8CBB2C761B5000CA256C /* TopMomentumItemView.swift */; };
 		9EF8A3452C74FA8C00C694CF /* crampxxxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF8A3442C74FA8C00C694CF /* crampxxxApp.swift */; };
 		9EF8A3472C74FA8C00C694CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF8A3462C74FA8C00C694CF /* ContentView.swift */; };
 		9EF8A3492C74FA8F00C694CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EF8A3482C74FA8F00C694CF /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9EAD8CB32C76155300CA256C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9EAD8CB92C761B3B00CA256C /* TopMomentumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMomentumView.swift; sourceTree = "<group>"; };
+		9EAD8CBB2C761B5000CA256C /* TopMomentumItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMomentumItemView.swift; sourceTree = "<group>"; };
 		9EF8A3412C74FA8C00C694CF /* crampxxx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = crampxxx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EF8A3442C74FA8C00C694CF /* crampxxxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crampxxxApp.swift; sourceTree = "<group>"; };
 		9EF8A3462C74FA8C00C694CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +77,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9EAD8CAA2C7612BF00CA256C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9EF8A3442C74FA8C00C694CF /* crampxxxApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9EAD8CAB2C7612C100CA256C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9EAD8CB02C76146100CA256C /* Home */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9EAD8CAD2C7612CA00CA256C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9EAD8CAE2C7612D100CA256C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9EAD8CAF2C7612D300CA256C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9EAD8CB02C76146100CA256C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9EAD8CB22C76154200CA256C /* ViewModels */,
+				9EAD8CB12C76153800CA256C /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9EAD8CB12C76153800CA256C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9EAD8CB32C76155300CA256C /* HomeView.swift */,
+				9EAD8CB92C761B3B00CA256C /* TopMomentumView.swift */,
+				9EAD8CBB2C761B5000CA256C /* TopMomentumItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9EAD8CB22C76154200CA256C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		9EF8A3382C74FA8C00C694CF = {
 			isa = PBXGroup;
 			children = (
@@ -94,7 +163,11 @@
 		9EF8A3432C74FA8C00C694CF /* crampxxx */ = {
 			isa = PBXGroup;
 			children = (
-				9EF8A3442C74FA8C00C694CF /* crampxxxApp.swift */,
+				9EAD8CAF2C7612D300CA256C /* Utils */,
+				9EAD8CAE2C7612D100CA256C /* Extensions */,
+				9EAD8CAD2C7612CA00CA256C /* Models */,
+				9EAD8CAB2C7612C100CA256C /* Core */,
+				9EAD8CAA2C7612BF00CA256C /* App */,
 				9EF8A3462C74FA8C00C694CF /* ContentView.swift */,
 				9EF8A3482C74FA8F00C694CF /* Assets.xcassets */,
 				9EF8A34A2C74FA8F00C694CF /* Preview Content */,
@@ -257,6 +330,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EAD8CBA2C761B3B00CA256C /* TopMomentumView.swift in Sources */,
+				9EAD8CB42C76155300CA256C /* HomeView.swift in Sources */,
+				9EAD8CBC2C761B5000CA256C /* TopMomentumItemView.swift in Sources */,
 				9EF8A3472C74FA8C00C694CF /* ContentView.swift in Sources */,
 				9EF8A3452C74FA8C00C694CF /* crampxxxApp.swift in Sources */,
 			);

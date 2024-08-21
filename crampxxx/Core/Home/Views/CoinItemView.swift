@@ -10,7 +10,7 @@ import SwiftUI
 struct CoinItemView: View {
     let id: Int
     var body: some View {
-        HStack(spacing: 10) {
+        HStack(spacing: 5) {
 //            Text(String(id))
 //                .font(.caption2)
 //                .fontWeight(.bold)
@@ -63,7 +63,7 @@ struct CoinItemView: View {
                         blue:50.0/255.0
                     )).padding(.leading,5)
             }.padding(.leading,2)
-        }.padding(.horizontal).padding(.vertical,4)
+        }.padding(.horizontal,10).padding(.vertical,4)
     }
 }
 

@@ -15,9 +15,9 @@ struct TopMomentumItemView: View {
                 .frame(width: 45,height: 45)
                 .foregroundColor(.green)
                 .padding(
-                    EdgeInsets(top: 0, leading: 5, bottom: 10, trailing: 0)
+                    EdgeInsets(top: 0, leading: 5, bottom: 5, trailing: 0)
                 )
-            HStack {
+            HStack(spacing: 5) {
                 Text("HBAR")
                     .font(.caption)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -25,7 +25,7 @@ struct TopMomentumItemView: View {
                     .font(.caption)
                     .foregroundColor(.secondary)
             }.padding(
-                EdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 0)
+                .leading,4
             )
             Text("+ 34%")
                 .font(.title2)

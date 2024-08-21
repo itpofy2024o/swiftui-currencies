@@ -10,6 +10,8 @@
 		9EAD8CB42C76155300CA256C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD8CB32C76155300CA256C /* HomeView.swift */; };
 		9EAD8CBA2C761B3B00CA256C /* TopMomentumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD8CB92C761B3B00CA256C /* TopMomentumView.swift */; };
 		9EAD8CBC2C761B5000CA256C /* TopMomentumItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD8CBB2C761B5000CA256C /* TopMomentumItemView.swift */; };
+		9EAD8CBE2C76431100CA256C /* CoinListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD8CBD2C76431100CA256C /* CoinListView.swift */; };
+		9EAD8CC02C76432500CA256C /* CoinItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD8CBF2C76432500CA256C /* CoinItemView.swift */; };
 		9EF8A3452C74FA8C00C694CF /* crampxxxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF8A3442C74FA8C00C694CF /* crampxxxApp.swift */; };
 		9EF8A3472C74FA8C00C694CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF8A3462C74FA8C00C694CF /* ContentView.swift */; };
 		9EF8A3492C74FA8F00C694CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EF8A3482C74FA8F00C694CF /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 		9EAD8CB32C76155300CA256C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9EAD8CB92C761B3B00CA256C /* TopMomentumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMomentumView.swift; sourceTree = "<group>"; };
 		9EAD8CBB2C761B5000CA256C /* TopMomentumItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMomentumItemView.swift; sourceTree = "<group>"; };
+		9EAD8CBD2C76431100CA256C /* CoinListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListView.swift; sourceTree = "<group>"; };
+		9EAD8CBF2C76432500CA256C /* CoinItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinItemView.swift; sourceTree = "<group>"; };
 		9EF8A3412C74FA8C00C694CF /* crampxxx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = crampxxx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EF8A3442C74FA8C00C694CF /* crampxxxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crampxxxApp.swift; sourceTree = "<group>"; };
 		9EF8A3462C74FA8C00C694CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				9EAD8CB32C76155300CA256C /* HomeView.swift */,
 				9EAD8CB92C761B3B00CA256C /* TopMomentumView.swift */,
 				9EAD8CBB2C761B5000CA256C /* TopMomentumItemView.swift */,
+				9EAD8CBD2C76431100CA256C /* CoinListView.swift */,
+				9EAD8CBF2C76432500CA256C /* CoinItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -334,7 +340,9 @@
 				9EAD8CB42C76155300CA256C /* HomeView.swift in Sources */,
 				9EAD8CBC2C761B5000CA256C /* TopMomentumItemView.swift in Sources */,
 				9EF8A3472C74FA8C00C694CF /* ContentView.swift in Sources */,
+				9EAD8CC02C76432500CA256C /* CoinItemView.swift in Sources */,
 				9EF8A3452C74FA8C00C694CF /* crampxxxApp.swift in Sources */,
+				9EAD8CBE2C76431100CA256C /* CoinListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

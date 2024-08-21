@@ -11,7 +11,7 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ScrollView(.vertical,showsIndicators: false) {
-                
+                TopMomentumView()
             }.navigationTitle("Coins Streaming")
         }
     }

@@ -12,6 +12,8 @@ struct HomeView: View {
         NavigationView {
             ScrollView(.vertical,showsIndicators: false) {
                 TopMomentumView()
+                Divider()
+                CoinListView()
             }.navigationTitle("Coins Streaming")
         }
     }

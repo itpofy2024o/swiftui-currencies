@@ -19,7 +19,7 @@ struct TopMomentumView: View {
                         TopMomentumItemView()
                     }
                 }
-            }
+            }.scrollIndicators(.hidden)
         }.padding()
     }
 }

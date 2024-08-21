@@ -12,8 +12,8 @@ struct CoinItemView: View {
     var body: some View {
         HStack(spacing: 10) {
             Text(String(id))
-                .font(.headline)
-                .fontWeight(.semibold)
+                .font(.caption)
+                .fontWeight(.bold)
                 .foregroundColor(
                     Color(
                         red:53.0/255.0,
@@ -27,7 +27,6 @@ struct CoinItemView: View {
                 .scaledToFit()
                 .frame(width: 35,height: 35)
                 .foregroundColor(.gray)
-                .padding(.leading,2)
             
             VStack(alignment: .leading, spacing: 4) {
                 Text("LiteCoin")
@@ -37,7 +36,7 @@ struct CoinItemView: View {
                         red:60.0/255.0,
                         green:50.0/255.0,
                         blue:40.0/255.0
-                    )).padding(.leading,3)
+                    )).padding(.leading,4)
                 Text("LTC")
                     .font(.caption)
                     .fontWeight(.medium)
@@ -53,12 +52,12 @@ struct CoinItemView: View {
             VStack(alignment: .trailing,spacing:4) {
                 Text("$ 65,000.23")
                     .font(.subheadline)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.semibold)
                     .foregroundColor(Color(
                         red:60.0/255.0,
                         green:50.0/255.0,
                         blue:40.0/255.0
-                    )).padding(.leading,3)
+                    )).padding(.leading,4)
                 Text("- 5.6%")
                     .font(.caption)
                     .fontWeight(.medium)

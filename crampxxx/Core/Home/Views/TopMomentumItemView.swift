@@ -37,11 +37,6 @@ struct TopMomentumItemView: View {
                     Text(upCrypto.symbol.uppercased())
                         .font(.title3)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-//                        .foregroundColor(Color(
-//                            red:5.0/255.0,
-//                            green:68.0/255.0,
-//                            blue:230.0/255.0
-//                        ).opacity(0.8))
                     Text(
                         upCrypto.currentPrice >= 1.0 ? "\(String(format: "%.2f", upCrypto.currentPrice))" :
                             (

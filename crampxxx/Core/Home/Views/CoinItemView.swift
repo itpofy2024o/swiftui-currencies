@@ -20,17 +20,12 @@ struct CoinItemView: View {
                         case .success(let image):
                             image
                                 .resizable()
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(Color(.clear),lineWidth: 0.5)
-                                )
                         default:
                             ProgressView()
                         }
                 }
                 .scaledToFit()
                 .frame(width: 35,height: 35)
-//                .foregroundColor(.gray)
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(singleCrypto.name)
@@ -47,7 +42,7 @@ struct CoinItemView: View {
             
             VStack(alignment: .trailing,spacing:4) {
                 Text(
-                    singleCrypto.currentPrice >= 1.0 ?"$ \(singleCrypto.currentPrice.toBigValue())" :
+                    singleCrypto.currentPrice >= 1.0 ?"$ \(String(format: "%.2f", singleCrypto.currentPrice))" :
                         (
                             singleCrypto.currentPrice > 0.0001 ? "$ \(String(format: "%.4f", singleCrypto.currentPrice))"
                             : "$ \(String(format: "%.6f", singleCrypto.currentPrice))"

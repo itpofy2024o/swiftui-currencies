@@ -29,8 +29,12 @@ struct TopMomentumItemView: View {
                     .font(.caption)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 Text(
-                    upCrypto.currentPrice < 0.0 ? "\(String(format: "%.5f", upCrypto.currentPrice))"
-                    : "\(String(format: "%.2f", upCrypto.currentPrice))")
+                    upCrypto.currentPrice >= 1.0 ? "\(String(format: "%.2f", upCrypto.currentPrice))" :
+                        (
+                            upCrypto.currentPrice > 0.001 ? "\(String(format: "%.4f", upCrypto.currentPrice))"
+                            : "\(String(format: "%.6f", upCrypto.currentPrice))"
+                        )
+                    )
                     .font(.caption)
                     .foregroundColor(.secondary)
             }.padding(

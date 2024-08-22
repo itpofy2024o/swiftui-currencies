@@ -11,7 +11,7 @@ extension Double {
     private var smallValueFormatter: NumberFormatter {
         let form = NumberFormatter()
         form.usesGroupingSeparator=true
-        form.numberStyle = .currency
+        form.numberStyle = .currency // if used will detect the local currency and adding the corresponding symbol in front of the formatted value
         form.minimumFractionDigits=8
         form.maximumFractionDigits=8
         return form
@@ -20,7 +20,6 @@ extension Double {
     private var bigValueFormatter: NumberFormatter {
         let form = NumberFormatter()
         form.usesGroupingSeparator=true
-        form.numberStyle = .currency
         form.minimumFractionDigits=2
         form.maximumFractionDigits=2
         return form

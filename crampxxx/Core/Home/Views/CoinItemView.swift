@@ -48,14 +48,16 @@ struct CoinItemView: View {
             
             VStack(alignment: .trailing,spacing:4) {
                 Text(
-                    singleCrypto.currentPrice < 0.00001 ? String(singleCrypto.currentPrice.toSmallValue()) :
-                        singleCrypto.currentPrice < 0.0 && singleCrypto.currentPrice >= 0.00001 ? String(singleCrypto.currentPrice.toSmallMidValue()):
-                        singleCrypto.currentPrice > 0.0 ? String(singleCrypto.currentPrice.toBigValue()):String(0.0)
+                    singleCrypto.currentPrice >= 1.0 ?"$ \(singleCrypto.currentPrice.toBigValue())" :
+                        (
+                            singleCrypto.currentPrice > 0.0001 ? "$ \(String(format: "%.4f", singleCrypto.currentPrice))"
+                            : "$ \(String(format: "%.6f", singleCrypto.currentPrice))"
+                        )
                     )
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .padding(.leading,4)
-                Text("\(singleCrypto.priceChangePercentage24H)")
+                Text(singleCrypto.priceChangePercentage24H > 0.0 ? "+ \(String(format: "%.2f", singleCrypto.priceChangePercentage24H))%" : "- \(String(format: "%.2f", singleCrypto.priceChangePercentage24H * -1))%")
                     .font(.caption)
                     .fontWeight(.medium)
                     .foregroundColor(singleCrypto.priceChangePercentage24H < 0.0 ? Color(

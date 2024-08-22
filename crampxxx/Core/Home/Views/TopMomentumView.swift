@@ -19,7 +19,7 @@ struct TopMomentumView: View {
                     ForEach(dataModel.topMover) { mover in
                         TopMomentumItemView(upCrypto: mover)
                     }
-                }
+                }.padding(EdgeInsets(top: 1, leading: 1, bottom: 0, trailing: 0))
             }.scrollIndicators(.hidden)
         }.padding()
     }

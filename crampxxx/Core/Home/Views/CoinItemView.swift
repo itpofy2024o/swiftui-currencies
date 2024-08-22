@@ -20,9 +20,8 @@ struct CoinItemView: View {
                         case .success(let image):
                             image
                                 .resizable()
-                                .background(Color(.white))
                                 .overlay(
-                                    RoundedRectangle(cornerRadius: 10)
+                                    RoundedRectangle(cornerRadius: 20)
                                         .stroke(Color(.clear),lineWidth: 0.5)
                                 )
                         default:
@@ -31,7 +30,7 @@ struct CoinItemView: View {
                 }
                 .scaledToFit()
                 .frame(width: 35,height: 35)
-                .foregroundColor(.gray)
+//                .foregroundColor(.gray)
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(singleCrypto.name)

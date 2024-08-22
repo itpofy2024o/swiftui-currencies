@@ -15,10 +15,10 @@ struct TopMomentumItemView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
                 .fill(colorScheme == .dark ? Color(
-                    red:210.0/255.0,
-                    green:211.0/255.0,
-                    blue:212.0/255.0
-                ).opacity(0.5):Color(
+                    red:50.0/255.0,
+                    green:51.0/255.0,
+                    blue:52.0/255.0
+                ).opacity(0.75):Color(
                     red:210.0/255.0,
                     green:211.0/255.0,
                     blue:212.0/255.0

@@ -16,7 +16,11 @@ struct TopMomentumItemView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 45,height: 45)
-                .foregroundColor(.green)
+                .background(Color(.white))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 15)
+                        .stroke(Color(.clear),lineWidth: 0.5)
+                )
                 .padding(
                     EdgeInsets(top: 0, leading: 5, bottom: 5, trailing: 0)
                 )
@@ -24,15 +28,17 @@ struct TopMomentumItemView: View {
                 Text(upCrypto.symbol.uppercased())
                     .font(.caption)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                Text("\(upCrypto.currentPrice)")
+                Text(
+                    upCrypto.currentPrice < 0.0 ? "\(String(format: "%.5f", upCrypto.currentPrice))"
+                    : "\(String(format: "%.2f", upCrypto.currentPrice))")
                     .font(.caption)
                     .foregroundColor(.secondary)
             }.padding(
                 .leading,4
             )
-            Text("\(upCrypto.priceChangePercentage24H)")
+            Text("+ \(String(format: "%.2f", upCrypto.priceChangePercentage24H))%")
                 .font(.title2)
-                .foregroundColor(.blue)
+                .foregroundColor(.green)
                 .padding(
                     EdgeInsets(top: 0, leading: 3, bottom: 0, trailing: 0)
                 )

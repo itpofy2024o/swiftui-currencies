@@ -20,6 +20,11 @@ struct CoinItemView: View {
                         case .success(let image):
                             image
                                 .resizable()
+                                .background(Color(.white))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color(.clear),lineWidth: 0.5)
+                                )
                         default:
                             ProgressView()
                         }
@@ -42,16 +47,24 @@ struct CoinItemView: View {
             Spacer()
             
             VStack(alignment: .trailing,spacing:4) {
-                Text(String(singleCrypto.currentPrice))
+                Text(
+                    singleCrypto.currentPrice < 0.00001 ? String(singleCrypto.currentPrice.toSmallValue()) :
+                        singleCrypto.currentPrice < 0.0 && singleCrypto.currentPrice >= 0.00001 ? String(singleCrypto.currentPrice.toSmallMidValue()):
+                        singleCrypto.currentPrice > 0.0 ? String(singleCrypto.currentPrice.toBigValue()):String(0.0)
+                    )
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .padding(.leading,4)
                 Text("\(singleCrypto.priceChangePercentage24H)")
                     .font(.caption)
                     .fontWeight(.medium)
-                    .foregroundColor(Color(
-                        red:270.0/255.0,
+                    .foregroundColor(singleCrypto.priceChangePercentage24H < 0.0 ? Color(
+                        red:240.0/255.0,
                         green:60.0/255.0,
+                        blue:50.0/255.0
+                    ):Color(
+                        red:50.0/255.0,
+                        green:210.0/255.0,
                         blue:50.0/255.0
                     )).padding(.leading,5)
             }.padding(.leading,2)

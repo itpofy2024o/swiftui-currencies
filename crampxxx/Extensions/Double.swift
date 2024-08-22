@@ -26,8 +26,21 @@ extension Double {
         return form
     }
     
+    private var smallMidValueFormatter: NumberFormatter {
+        let form = NumberFormatter()
+        form.usesGroupingSeparator=true
+        form.numberStyle = .currency
+        form.minimumFractionDigits=4
+        form.maximumFractionDigits=4
+        return form
+    }
+    
     func toSmallValue() -> String {
         return smallValueFormatter.string(for:self) ?? "$0.00"
+    }
+    
+    func toSmallMidValue() -> String {
+        return smallMidValueFormatter.string(for:self) ?? "$0.00"
     }
     
     func toBigValue() -> String {

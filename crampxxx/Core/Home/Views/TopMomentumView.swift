@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TopMomentumView: View {
+    @StateObject var dataModel: HomeViewModel
     var body: some View {
         VStack(alignment: .leading) {
             Text("Top Momemtum")
@@ -25,5 +26,5 @@ struct TopMomentumView: View {
 }
 
 #Preview {
-    TopMomentumView()
+    TopMomentumView(dataModel: HomeViewModel())
 }

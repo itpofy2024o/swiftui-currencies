@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TopMomentumItemView: View {
+//    let singleCrypto: Crypto
     var body: some View {
         VStack(alignment: .leading) {
             Image(systemName: "bitcoinsign.circle.fill")
@@ -37,7 +38,7 @@ struct TopMomentumItemView: View {
         .frame(width: 150, height: 150)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color(.systemGray2),lineWidth: 1)
+                .stroke(Color(.black),lineWidth: 1)
         )
     }
 }

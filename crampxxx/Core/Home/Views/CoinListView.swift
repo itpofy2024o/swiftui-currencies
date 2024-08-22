@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CoinListView: View {
+    @StateObject var dataModel: HomeViewModel
     var body: some View {
         VStack(alignment:.leading) {
             Text("All Coins and Tokens")
@@ -23,8 +24,8 @@ struct CoinListView: View {
             
             ScrollView(.vertical) {
                 VStack {
-                    ForEach(0 ..< 250) { index in
-                        CoinItemView(id: index+1)
+                    ForEach(dataModel.crypto) { crypto in
+                        CoinItemView(singleCrypto: crypto)
                     }
                 }
             }
@@ -32,6 +33,6 @@ struct CoinListView: View {
     }
 }
 
-#Preview {
-    CoinListView()
-}
+//#Preview {
+//    CoinListView(dataModel: data)
+//}

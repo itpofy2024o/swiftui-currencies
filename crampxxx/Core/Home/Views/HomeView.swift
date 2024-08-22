@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject var coin24hModel = HomeViewModel()
+    
     var body: some View {
         NavigationView {
             ScrollView(.vertical,showsIndicators: false) {
-                TopMomentumView()
+                TopMomentumView(dataModel: coin24hModel)
                 Divider()
-                CoinListView()
+                CoinListView(dataModel: coin24hModel)
             }.navigationTitle("Coins Streaming")
         }
     }

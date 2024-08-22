@@ -24,7 +24,7 @@ struct CoinListView: View {
             
             ScrollView(.vertical) {
                 VStack {
-                    ForEach(dataModel.crypto) { crypto in
+                    ForEach(dataModel.cryptos) { crypto in
                         CoinItemView(singleCrypto: crypto)
                     }
                 }
@@ -33,6 +33,6 @@ struct CoinListView: View {
     }
 }
 
-//#Preview {
-//    CoinListView(dataModel: data)
-//}
+#Preview {
+    CoinListView(dataModel: HomeViewModel())
+}

@@ -16,8 +16,8 @@ struct TopMomentumView: View {
             
             ScrollView(.horizontal) {
                 HStack(spacing: 12) {
-                    ForEach(0 ..< 4) { _ in
-                        TopMomentumItemView()
+                    ForEach(dataModel.topMover) { mover in
+                        TopMomentumItemView(upCrypto: mover)
                     }
                 }
             }.scrollIndicators(.hidden)

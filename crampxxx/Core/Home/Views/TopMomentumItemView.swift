@@ -6,43 +6,45 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct TopMomentumItemView: View {
-//    let singleCrypto: Crypto
+    let upCrypto: Crypto
     var body: some View {
         VStack(alignment: .leading) {
-            Image(systemName: "bitcoinsign.circle.fill")
+            KFImage(URL(string:upCrypto.image))
                 .resizable()
+                .scaledToFit()
                 .frame(width: 45,height: 45)
                 .foregroundColor(.green)
                 .padding(
                     EdgeInsets(top: 0, leading: 5, bottom: 5, trailing: 0)
                 )
             HStack(spacing: 5) {
-                Text("HBAR")
+                Text(upCrypto.symbol.uppercased())
                     .font(.caption)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                Text("20,0000.5678")
+                Text("\(upCrypto.currentPrice)")
                     .font(.caption)
                     .foregroundColor(.secondary)
             }.padding(
                 .leading,4
             )
-            Text("+ 34%")
+            Text("\(upCrypto.priceChangePercentage24H)")
                 .font(.title2)
-                .foregroundColor(.orange)
+                .foregroundColor(.blue)
                 .padding(
                     EdgeInsets(top: 0, leading: 3, bottom: 0, trailing: 0)
                 )
         }
         .frame(width: 150, height: 150)
         .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(Color(.black),lineWidth: 1)
+            RoundedRectangle(cornerRadius: 15)
+                .stroke(Color(.systemGray2),lineWidth: 2)
         )
     }
 }
 
-#Preview {
-    TopMomentumItemView()
-}
+//#Preview {
+//    TopMomentumItemView()
+//}

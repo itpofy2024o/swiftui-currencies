@@ -8,8 +8,9 @@
 import SwiftUI
 
 class HomeViewModel: ObservableObject {
-    @Published var crypto = [Crypto]()
     @Published var topMover = [Crypto]()
+    
+    @Published var cryptos = [Crypto]()
     
     init() {
         retrieveCryptoData()
@@ -31,12 +32,13 @@ class HomeViewModel: ObservableObject {
             }
             
             guard let data = data else { return }
-//            let dString = String(data:data,encoding: .utf8)
-//            print("\(String(describing: dString))")
+            
             do {
                 let market = try JSONDecoder().decode([Crypto].self,from: data)
-                print("markets: \(market)")
-                self.crypto=market
+                DispatchQueue.main.sync {
+                    self.cryptos=market
+                    self.TopMomentumFinder()
+                }
             } catch let error {
                 print("market error: \(error)")
             }
@@ -44,7 +46,7 @@ class HomeViewModel: ObservableObject {
     }
     
     func TopMomentumFinder() {
-        let topMoving = crypto.sorted(by: {$0.priceChangePercentage24H>$1.priceChangePercentage24H})
+        let topMoving = cryptos.sorted(by: {$0.priceChangePercentage24H>$1.priceChangePercentage24H})
         self.topMover = Array(topMoving.prefix(5))
     }
 }
